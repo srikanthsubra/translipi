@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="translipi" height="40" author="Srikanth Subramanian"/>
+  <Content type="html">
+     <![CDATA[
+     <script src="http://sahityam.net/translipi.js" type="text/javascript"></script>
+     <script type="text/javascript">
+        var mainPage;   // Reference to the main (container) page
+
+        gadgets.util.registerOnLoadHandler(function() {
+            document.getElementById("cbScriptChoice").value = translipi.loadChosenLipi();
+            translipi.main();
+            translipi.manageEvent(window, "message", receiveMsgFromBlog);
+        });
+
+        function receiveMsgFromBlog(e) {
+            var msg = e.data;
+            switch (msg.type) {
+                case "ScriptChoiceRequest":
+                    mainPage = e.source;
+                    e.source.postMessage(new translipi.Message("ScriptChoiceResponse",
+                                document.getElementById("cbScriptChoice").value), "*");
+                    break;
+            }
+        }
+
+        function handleLipiChange() {
+            var chosenLipi = document.getElementById("cbScriptChoice").value;
+            translipi.saveChosenLipi(chosenLipi);
+            translipi.main();
+            mainPage.postMessage(new translipi.Message("ScriptChangeRequest", chosenLipi),
+                                 "*");
+        }
+     </script>
+
+    <!--<b><span  style="font-style: italic">trans</span><span lipi=1>lipi</span></b>-->
+     <form id="frmTranslipi">
+     <select id="cbScriptChoice" onchange=handleLipiChange()>
+        <option value="sa">Devanagari
+        <option value="kn">Kannada
+        <option value="ml">Malayalam
+        <option value="en" selected>Roman
+        <option value="ta">Tamil
+        <option value="te">Telugu
+    </select>
+    </form>
+     ]]>
+  </Content>
+</Module>
