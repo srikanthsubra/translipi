@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Translipi by srikanthsubra</title>
+    <title>translipi by srikanthsubra</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -31,10 +31,12 @@
     <div class="wrapper">
       <header>
         <h1 class="header"><i>trans</i><span lipi=1>lipi</span></h1>
-        <p class="header">In-place transliteration of text to Indic scripts of reader’s choice</p>
+        <!--<p class="header">In-place transliteration of text to Indic scripts of reader’s choice</p>-->
 
-        <form id="frmTranslipi">
-         <select id="cbScriptChoice" onchange=handleScriptChange()>
+        <p class="header">
+        <form id="frmTranslipi" >
+        Try it:<br/>
+         <select id="cbScriptChoice" style="font-size: 14px" onchange=handleScriptChange()>
             <option value="sa">Devanagari
             <option value="kn">Kannada
             <option value="ml">Malayalam
@@ -43,6 +45,7 @@
             <option value="te">Telugu
         </select>
         </form>
+        </p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/srikanthsubra/translipi/zipball/master">Download ZIP</a></li>
@@ -56,26 +59,26 @@
       </header>
       <section>
         <h2>
-<a id="what-is-translipi" class="anchor" href="#what-is-translipi" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is <em>trans</em>lipi?</h2>
+<a id="what-is-translipi" class="anchor" href="#what-is-translipi" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is <em>trans</em><span lipi=1>lipi</span>?</h2>
 
 <p>The English alphabet is inadequate to accurately denote how words from Indian languages are pronounced.
 Consider the word “anuswara”.
-Does it refer to the Indic nasalization mark (anu-<em>swaa</em>-ra)?
-Or does it refer to the subnote of Indian classical music (with the second syllable short)?
+Does it refer to the Indic nasalization mark (anu-<span lipi=1>swA</span>-ra)?
+Or does it refer to the subnote of Indian classical music (anu-<span lipi=1>swa</span>-ra)?
 This confusion is especially pronounced with blogs and websites that deal with subjects whose vocabulary abounds in Indic terms.</p>
 
 <p>One could write these words in (say) Kannada, but this would put non-Kannada readers at a loss.
 The script that each reader is most comfortable in is different.
-Hence <em>trans</em>lipi.</p>
+Hence <em>trans</em><span lipi=1>lipi</span>.</p>
 
-<p><em>trans</em>lipi consists of two parts:</p>
+<p><em>trans</em><span lipi=1>lipi</span> consists of two parts:</p>
 
 <ul>
-<li>A widget with a drop-down list for the user to select a script, and</li>
-<li>Browser-side code (in JavaScript) that transliterates the marked-up text into the chosen script.</li>
+<li>A widget with a drop-down list for the reader to select a script, and</li>
+<li>Browser-side code that transliterates the marked-up text into the chosen script.</li>
 </ul>
 
-<p>The text to be transliterated needs to be in Harvard–Kyoto notation.
+<p>The text to be transliterated needs to be in Harvard–Kyoto (-like) notation.
 One way to mark the text is by surrounding it with <code>&lt;span lipi=1&gt;</code> and <code>&lt;/span&gt;</code> tags.
 Alternatively, if the text is already part of an existing HTML element, just include the attribute <code>lipi=1</code> in the opening tag.</p>
 
@@ -85,10 +88,10 @@ Alternatively, if the text is already part of an existing HTML element, just inc
 <h3>
 <a id="blogger-blogs" class="anchor" href="#blogger-blogs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blogger blogs</h3>
 
-<p>To install <em>trans</em>lipi for a Blogger blog:</p>
+<p>To install <em>trans</em><span lipi=1>lipi</span> for a Blogger blog:</p>
 
 <h4>
-<a id="1-install-the-translipi-widget" class="anchor" href="#1-install-the-translipi-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install the translipi widget</h4>
+<a id="1-install-the-translipi-widget" class="anchor" href="#1-install-the-translipi-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install <em>trans</em><span lipi=1>lipi</span> widget</h4>
 
 <ol>
 <li>Open the blog layout management page.  In the sidebar, choose “Add gadget”.</li>
@@ -97,7 +100,7 @@ Alternatively, if the text is already part of an existing HTML element, just inc
 </ol>
 
 <h4>
-<a id="2-add-the-javascript-code" class="anchor" href="#2-add-the-javascript-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Add the JavaScript code.</h4>
+<a id="2-add-the-javascript-code" class="anchor" href="#2-add-the-javascript-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Install browser-side code</h4>
 
 <ol>
 <li>Open the blog template management page.  Click the "Edit HTML” button.</li>
