@@ -1,34 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>Translipi by srikanthsubra</title>
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>Translipi by srikanthsubra</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Translipi</h1>
-        <h2>In-place transliteration of text to Indic scripts of reader’s choice</h2>
-        <a href="https://github.com/srikanthsubra/translipi" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Translipi</h1>
+        <p class="header">In-place transliteration of text to Indic scripts of reader’s choice</p>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h2>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/srikanthsubra/translipi/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/srikanthsubra/translipi/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/srikanthsubra/translipi">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/srikanthsubra">srikanthsubra</a></p>
+
+
+      </header>
+      <section>
+        <h2>
 <a id="what-is-translipi" class="anchor" href="#what-is-translipi" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is <em>trans</em>lipi?</h2>
 
 <p>The English alphabet is inadequate to accurately denote how words from Indian languages are pronounced.
@@ -60,45 +62,29 @@ Alternatively, if the text is already part of an existing HTML element, just inc
 
 <p>To install <em>trans</em>lipi for a Blogger blog:</p>
 
-<ol>
-<li>Install the translipi widget.
+<h4>
+<a id="1-install-the-translipi-widget" class="anchor" href="#1-install-the-translipi-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install the translipi widget</h4>
 
-<ol>
-<li>Open the blog layout management page.  In the sidebar, choose “Add gadget”.</li>
-<li>In the popup, select the “Add your own” tab.</li>
-<li>Enter <code>http://sahityam.net/translipi.xml</code> in the URL textbox.  Click on the “Add by URL” link.  Save the gadget settings.</li>
-</ol>
-</li>
-<li>Add the JavaScript code.
+<pre><code>1. Open the blog layout management page.  In the sidebar, choose “Add gadget”.
+2. In the popup, select the “Add your own” tab.
+3. Enter ``http://sahityam.net/translipi.xml`` in the URL textbox.  Click on the “Add by URL” link.  Save the gadget settings.
+</code></pre>
 
-<ol>
-<li>Open the blog template management page.  Click the "Edit HTML” button.</li>
-<li>Copy the two script elements from the <a href="https://github.com/srikanthsubra/translipi/blob/master/blogger/blog.html">this file</a>.  Paste them between the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags in the blog HTML code.</li>
-<li>Save the changes.</li>
-</ol>
-</li>
-</ol>
+<h4>
+<a id="2-add-the-javascript-code" class="anchor" href="#2-add-the-javascript-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Add the JavaScript code.</h4>
+
+<pre><code>1. Open the blog template management page.  Click the "Edit HTML” button.
+2. Copy the two script elements from the [this file](https://github.com/srikanthsubra/translipi/blob/master/blogger/blog.html).  Paste them between the `&lt;head&gt;` and `&lt;/head&gt;` tags in the blog HTML code.
+3. Save the changes.
+</code></pre>
 
 <p>To test, mark up some text in a post for transliteration, as described earlier.  Open your blog and verify.  That's it!</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/srikanthsubra/translipi/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/srikanthsubra/translipi/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/srikanthsubra/translipi"></a> is maintained by <a href="https://github.com/srikanthsubra">srikanthsubra</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
