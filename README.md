@@ -1,7 +1,7 @@
 # *trans*lipi
 
 ## What is *trans*lipi?
-The English alphabet is inadequate to accurately denote how words from Indian languages are pronounced.
+The English alphabet is inadequate to accurately denote how words from Indian languages are to be pronounced.
 Consider the word “anuswara”.
 Does it refer to the Indic nasalization mark (anu-*swaa*-ra)?
 Or does it refer to the subnote of Indian classical music (with the second syllable short)?
@@ -26,11 +26,11 @@ Alternatively, if the text is already part of an existing HTML element, just inc
 
 To install *trans*lipi for a Blogger blog:
 
-1. Install the translipi widget.
+1. Install translipi widget
     1. Open the blog layout management page.  In the sidebar, choose “Add gadget”.
     2. In the popup, select the “Add your own” tab.
     3. Enter ``http://sahityam.net/translipi.xml`` in the URL textbox.  Click on the “Add by URL” link.  Save the gadget settings.
-2. Add the JavaScript code.
+2. Install browser-side code
     1. Open the blog template management page.  Click the "Edit HTML” button.
     2. Copy the two script elements from the [this file](https://github.com/srikanthsubra/translipi/blob/master/blogger/blog.html).  Paste them between the `<head>` and `</head>` tags in the blog HTML code.
     3. Save the changes.

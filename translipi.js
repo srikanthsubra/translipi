@@ -4,7 +4,7 @@ LIPI_EXPIRY = 30 * 24 * 3600 * 1000;  // 30 days
 
 var chosenLipi = LIPI_DEFAULT;
 
-// Public API
+/* ---- Public API ---- */
 var translipi = {
     "loadChosenLipi": loadLipi,
     "saveChosenLipi": saveLipi,
@@ -38,7 +38,7 @@ function saveLipi(lipi) {
     document.cookie = LIPI_COOKIE + "=" + chosenLipi + addendum;
 }
 
-/* --- PostMessage --- */
+/* ---- PostMessage ---- */
 function manageEvent(eventObj, event, eventHandler) {
    if (eventObj.addEventListener) {
       eventObj.addEventListener(event, eventHandler,false);
@@ -48,8 +48,7 @@ function manageEvent(eventObj, event, eventHandler) {
    }
 }
 
-/*---- DOM ---------*/
-
+/* ---- DOM ---- */
 function traverseTree(node, cond, proc) {
    if (cond(node)) {
        proc(node);
@@ -61,9 +60,9 @@ function traverseTree(node, cond, proc) {
    }
 }
 
+/*---- Transliteration ---- */
 var lipiSubtrees = [];
 var lipiElementsSaved = false;
-/*---- Transliteration  ---------*/
 
 var devanagari = {
     "O$": "ो", "ch": "छ", "zh": "ऴ", "jh": "झ", "ai": "ऐ", "||": "॥",
@@ -307,7 +306,7 @@ function main(lipi) {
     lipiElementsSaved = true;
 }
 
-/* ---- Blog-side code -- */
+/* ---- Blog-side code ---- */
 function getTranslipiWidget() {
     iframes = document.getElementsByTagName("iframe");
     for (var i = 0; i < iframes.length; i++) {
