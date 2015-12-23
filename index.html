@@ -12,7 +12,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src=http://sahityam.net/translipi.js></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/srikanthsubra/translipi/v0.1/translipi.js"></script>
     <script>
     window.onload = function() {
         document.getElementById("cbScriptChoice").value = translipi.loadChosenLipi();
@@ -61,7 +61,7 @@
         <h2>
 <a id="what-is-translipi" class="anchor" href="#what-is-translipi" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is <em>trans</em><span lipi=1>lipi</span>?</h2>
 
-<p>The English alphabet is inadequate to accurately denote how words from Indian languages are pronounced.
+<p>The English alphabet is inadequate to accurately denote how words from Indian languages are to be pronounced.
 Consider the word “anuswara”.
 Does it refer to the Indic nasalization mark (anu-<span lipi=1>swA</span>-ra)?
 Or does it refer to the subnote of Indian classical music (anu-<span lipi=1>swa</span>-ra)?
@@ -96,7 +96,7 @@ Alternatively, if the text is already part of an existing HTML element, just inc
 <ol>
 <li>Open the blog layout management page.  In the sidebar, choose “Add gadget”.</li>
 <li>In the popup, select the “Add your own” tab.</li>
-<li>Enter <code>http://sahityam.net/translipi.xml</code> in the URL textbox.  Click on the “Add by URL” link.  Save the gadget settings.</li>
+<li>Enter <code>https://cdn.rawgit.com/srikanthsubra/translipi/v0.1/blogger/translipi.xml</code> in the URL textbox.  Click on the “Add by URL” link.  Save the gadget settings.</li>
 </ol>
 
 <h4>
@@ -104,11 +104,111 @@ Alternatively, if the text is already part of an existing HTML element, just inc
 
 <ol>
 <li>Open the blog template management page.  Click the "Edit HTML” button.</li>
-<li>Copy the two script elements from the <a href="https://github.com/srikanthsubra/translipi/blob/master/blogger/blog.html">this file</a>.  Paste them between the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags in the blog HTML code.</li>
+<li>Copy the two script elements from the <a href="https://cdn.rawgit.com/srikanthsubra/translipi/v0.1/blogger/blog.html">this file</a>.  Paste them between the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags in the blog HTML code.</li>
 <li>Save the changes.</li>
 </ol>
 
 <p>To test, mark up some text in a post for transliteration, as described earlier.  Open your blog and verify.  That's it!</p>
+<h2>
+<a id="inputformat" class="anchor" href="#inputformat" aria-hidden="true"><span class="octicon octicon-link"></span></a>Input Format</h2>
+The text to be transliterated should be represented in Harvard–Kyoto like notation, using the symbols given below.
+
+<h3>
+<a id="Vowels" class="anchor" href="#vowels" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vowels</h3>
+
+<table>
+    <tr>
+        <td><code>a</code> (<span lipi=1>a</span>)</td>
+        <td><code>A</code> (<span lipi=1>A</span>)</td>
+        <td><code>i</code> (<span lipi=1>i</span>)</td>
+        <td><code>I</code> (<span lipi=1>I</span>)</td>
+        <td><code>u</code> (<span lipi=1>u</span>)</td>
+        <td><code>U</code> (<span lipi=1>U</span>)</td>
+    </tr>
+    <tr>
+        <td><code>R</code> (<span lipi=1>R</span>)</td>
+        <td><code>RR</code> (<span lipi=1>RR</span>)</td>
+        <td><code>lR</code> (<span lipi=1>lR</span>)</td>
+    </tr>
+    <tr>
+        <td><code>e</code> (<span lipi=1>e</span>)</td>
+        <td><code>E</code> (<span lipi=1>E</span>)</td>
+        <td><code>ai</code> (<span lipi=1>ai</span>)</td>
+        <td><code>o</code> (<span lipi=1>o</span>)</td>
+        <td><code>O</code> (<span lipi=1>O</span>)</td>
+        <td><code>au</code> (<span lipi=1>au</span>)</td>
+    </tr>
+    <tr>
+        <td><code>aM</code> (<span lipi=1>aM</span>)</td>
+        <td><code>aH</code> (<span lipi=1>aH</span>)</td>
+    </tr>
+</table>
+
+<h3>
+<a id="consonants" class="anchor" href="#consonants" aria-hidden="true"><span class="octicon octicon-link"></span></a>Consonants</h3>
+<table>
+    <tr>
+        <td><code>k</code> (<span lipi=1>k</span>)</td>
+        <td><code>kh</code> (<span lipi=1>kh</span>)</td>
+        <td><code>g</code> (<span lipi=1>g</span>)</td>
+        <td><code>gh</code> (<span lipi=1>gh</span>)</td>
+        <td><code>G</code> (<span lipi=1>G</span>)</td>
+    </tr>
+    <tr>
+        <td><code>c</code> (<span lipi=1>c</span>)</td>
+        <td><code>ch</code> (<span lipi=1>ch</span>)</td>
+        <td><code>j</code> (<span lipi=1>j</span>)</td>
+        <td><code>jh</code> (<span lipi=1>jh</span>)</td>
+        <td><code>J</code> (<span lipi=1>J</span>)</td>
+    </tr>
+    <tr>
+        <td><code>T</code> (<span lipi=1>T</span>)</td>
+        <td><code>Th</code> (<span lipi=1>Th</span>)</td>
+        <td><code>D</code> (<span lipi=1>D</span>)</td>
+        <td><code>Dh</code> (<span lipi=1>Dh</span>)</td>
+        <td><code>N</code> (<span lipi=1>N</span>)</td>
+    </tr>
+    <tr>
+        <td><code>t</code> (<span lipi=1>t</span>)</td>
+        <td><code>th</code> (<span lipi=1>th</span>)</td>
+        <td><code>d</code> (<span lipi=1>d</span>)</td>
+        <td><code>dh</code> (<span lipi=1>dh</span>)</td>
+        <td><code>n</code> (<span lipi=1>n</span>)</td>
+    </tr>
+    <tr>
+        <td><code>p</code> (<span lipi=1>p</span>)</td>
+        <td><code>ph</code> (<span lipi=1>ph</span>)</td>
+        <td><code>b</code> (<span lipi=1>b</span>)</td>
+        <td><code>bh</code> (<span lipi=1>bh</span>)</td>
+        <td><code>m</code> (<span lipi=1>m</span>)</td>
+    </tr>
+    <tr>
+        <td><code>y</code> (<span lipi=1>y</span>)</td>
+        <td><code>r</code> (<span lipi=1>r</span>)</td>
+        <td><code>l</code> (<span lipi=1>l</span>)</td>
+        <td><code>v/w</code> (<span lipi=1>v</span>)</td>
+    </tr>
+    <tr>
+        <td><code>z</code> (<span lipi=1>z</span>)</td>
+        <td><code>S</code> (<span lipi=1>S</span>)</td>
+        <td><code>s</code> (<span lipi=1>s</span>)</td>
+        <td><code>h</code> (<span lipi=1>h</span>)</td>
+    </tr>
+    <tr>
+        <td><code>L</code> (<span lipi=1>L</span>)</td>
+        <td><code>zh</code> (<span lipi=1>zh</span>)</td>
+        <td><code>rR</code> (<span lipi=1>rR</span>)</td>
+        <td><code>nN</code> (<span lipi=1>nN</span>)</td>
+    </tr>
+    <tr>
+        <td><code>Z</code> (<span lipi=1>Z</span>)</td>
+        <td><code>f</code> (<span lipi=1>f</span>)</td>
+    </tr>
+</table>
+
+<h3>
+<a id="others" class="anchor" href="#others" aria-hidden="true"><span class="octicon octicon-link"></span></a>Others</h3>
+Avagraha: <code>'</code> (<span lipi=1>bhajE'ham</span>)
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
