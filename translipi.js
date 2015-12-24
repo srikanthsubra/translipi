@@ -141,7 +141,7 @@ var roman = {
 
 malayalam = {
     "O$": "", "ch": "ഛ", "zh": "ഴ", "jh": "ഝ", "ai": "ഐ", "j": "ജ", "lRR$": "ൄ",
-    "'": "ʼ", "lRR": "ൡ", "lR": "ഌ", "Th": "ഠ", "U$": "ൂ", "A$": "ാ", "gh": "ഘ",
+    "'": "ഽ", "lRR": "ൡ", "lR": "ഌ", "Th": "ഠ", "U$": "ൂ", "A$": "ാ", "gh": "ഘ",
     "Z": "ജ", "bh": "ഭ", "dh": "ധ", "RR": "ൠ", "E$": "േ", "o$": "ൊ", "th": "ഥ",
     "e$": "െ", "u$": "ു", "ph": "ഫ", "I$": "ീ", "A": "ആ", "RR$": "ൃ", "E": "ഏ",
     "D": "ഡ", "G": "ങ", "rR": "റ", "I": "ഈ", "H": "ഃ", "J": "ഞ", "M": "ം",
@@ -155,12 +155,12 @@ malayalam = {
 
 var tamil = {
     "O$": "ோ", "ch": "ச", "zh": "ழ", "jh": "ஜ", "ai": "ஐ", "j": "ஜ",
-    "lRR": "ல", "lR": "ல", "Th": "ட", "U$": "ூ", "A$": "ா", "gh": "க",
-    "Z": "ஜ", "bh": "ப", "dh": "த", "RR": "ர", "E$": "ே", "o$": "ொ",
+    "lRR": "லூ", "lR": "லு", "Th": "ட", "U$": "ூ", "A$": "ா", "gh": "க",
+    "Z": "ஃஜ", "bh": "ப", "dh": "த", "RR": "ரூ", "E$": "ே", "o$": "ொ",
     "th": "த", "e$": "ெ", "u$": "ு", "ph": "ப", "I$": "ீ", "A": "ஆ",
-    "RR$": "்", "E": "ஏ", "D": "ட", "G": "ங", "rR": "ற", "I": "ஈ",
+    "RR$": "்ரூ", "E": "ஏ", "D": "ட", "G": "ங", "rR": "ற", "I": "ஈ",
     "H": ":", "J": "ஞ", "M": "ம", "L": "ள", "O": "ஓ", "N": "ண",
-    "R$": "்", "S": "ஷ", "R": "ர", "U": "ஊ", "T": "ட", "ai$": "ை",
+    "R$": "்ரு", "S": "ஷ", "R": "ரு", "U": "ஊ", "T": "ட", "ai$": "ை",
     "V$": "்", "w": "வ", "lR$": "்", "i$": "ி", "au$": "ௌ", "d": "த",
     "a": "அ", "c": "ச", "b": "ப", "e": "எ", "Dh": "ட", "g": "க",
     "f": "ஃ", "i": "இ", "h": "ஹ", "k": "க", "kh": "க", "m": "ம",
@@ -219,6 +219,8 @@ var preproc = {
         input = input.replace(reAlveolarN, "nN");
         var reAlveolarN2 = /\Bn(?=nN)/gm
         input = input.replace(reAlveolarN2, "nN");
+        var reAlveolarN = /\Bn$/gm
+        input = input.replace(reAlveolarN, "nN");
         var reNasalG = /\BM(?=[kg])/gm
         input = input.replace(reNasalG, "G");
         var reNasalJ = /\BM(?=[cj])/gm
@@ -251,6 +253,9 @@ function transliterate(input) {
         for(j = Math.min(input.length-i, 3); j > 0; j--) {
             var substr = input.substr(i,j);
             if(tab[substr] != undefined) {
+                if ((substr == "'") && (!previous || "oOeE'".indexOf(previous) == -1)) {
+                    break;
+                }
                 current = substr;
                 break;
             }
